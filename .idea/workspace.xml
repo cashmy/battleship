@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8a26558-97e8-4dbe-8648-632186573479" name="Default Changelist" comment="Connect game_actions.py to main.py for testing of setup. &#10;Updated testing sandbox for class testing of gameboard children instantiation.">
+    <list default="true" id="f8a26558-97e8-4dbe-8648-632186573479" name="Default Changelist" comment="Added default fleet placement on fleet game board. Added sample layout to test sandbox.">
+      <change afterPath="$PROJECT_DIR$/computer_player.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/human_player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fleet.py" beforeDir="false" afterPath="$PROJECT_DIR$/fleet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fleet_board.py" beforeDir="false" afterPath="$PROJECT_DIR$/fleet_board.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ship.py" beforeDir="false" afterPath="$PROJECT_DIR$/ship.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_sandbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_sandbox.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +42,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/test_sandbox.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Week-04/Projects/rock-paper-spock/player.py" />
   </component>
-  <component name="RunManager" selected="Python.Test Sandbox">
+  <component name="RunManager" selected="Python.main">
     <configuration name="Test Sandbox" type="PythonConfigurationType" factoryName="Python">
       <module name="battleship" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -157,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616469524692</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added default fleet placement on fleet game board. Added sample layout to test sandbox.">
+      <created>1616471538444</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1616471538444</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -177,17 +184,7 @@
     <MESSAGE value="Added unversion files." />
     <MESSAGE value="Create basic classes and some functions. (Some inheritance)" />
     <MESSAGE value="Connect game_actions.py to main.py for testing of setup. &#10;Updated testing sandbox for class testing of gameboard children instantiation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Connect game_actions.py to main.py for testing of setup. &#10;Updated testing sandbox for class testing of gameboard children instantiation." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/game_actions.py</url>
-          <line>9</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Added default fleet placement on fleet game board. Added sample layout to test sandbox." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added default fleet placement on fleet game board. Added sample layout to test sandbox." />
   </component>
 </project>
