@@ -7,8 +7,9 @@ class FleetBoard(GameBoard):
     def __init__(self, board_size):
         super().__init__('shot', board_size)
         self.initialize_board()
-        self.fleet = Fleet()
+        self.fleet = Fleet()  # Initialize the fleet
 
+    # This method is used for testing.
     def default_placement(self):
         # Destroyer
         self.board_layout[1][2] = 'D'
@@ -31,3 +32,9 @@ class FleetBoard(GameBoard):
         self.board_layout[7][3] = 'C'
         self.board_layout[8][3] = 'C'
         self.board_layout[9][3] = 'C'
+
+    @staticmethod
+    def check_board(row, col):
+        # add logic for check here
+        hit = True  # Always assume hit for testing purposes
+        return hit

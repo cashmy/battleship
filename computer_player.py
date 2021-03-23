@@ -13,5 +13,17 @@ class ComputerPlayer(Player):
             name = input(f'Player {player_number+1}/AI, what is your name?: ')
         return name
 
-    def method_of_play(self, gestures):
+    # Redefinition of parent class method for this child class
+    # A random method is available for all children which is defined in parent class
+    def method_of_fleet_assignment(self):
+        # inherit random assignment
+        # FUTURE SPRINT: Add allowance for AI calculation for best next placement
         pass
+
+    def determine_shot(self, board_size, method_type, opponent_fleet_board):
+        if method_type == '1' or method_type == '2':  # Random - Override user interaction to random for AI
+            # Call parent class base version actions
+            super().determine_shot(board_size, method_type, opponent_fleet_board)
+        else:
+            # define action here
+            pass
