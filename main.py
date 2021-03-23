@@ -8,4 +8,4 @@ def print_hi(name):
 if __name__ == '__main__':
     print_hi('Gamer')
     game_actions.game_setup()
-    game_actions.get_board_size()
+    game_actions.game_turn()

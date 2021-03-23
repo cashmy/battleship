@@ -3,8 +3,8 @@ from player import Player
 
 
 class ComputerPlayer(Player):
-    def __init__(self, name='', player_number=2):
-        super().__init__(name, player_number)
+    def __init__(self, name='', player_number=2, board_size=10):
+        super().__init__(name, player_number, board_size)
         pass
 
     @staticmethod
