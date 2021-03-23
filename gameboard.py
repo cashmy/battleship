@@ -40,4 +40,3 @@ class GameBoard:
         else:
             action = '~'
         self.board_layout[row-1][col-1] = action
-

@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8a26558-97e8-4dbe-8648-632186573479" name="Default Changelist" comment="For game setup: added player &amp; player type instantiation.">
+    <list default="true" id="f8a26558-97e8-4dbe-8648-632186573479" name="Default Changelist" comment="Add game board initializations and first display for all players.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/computer_player.py" beforeDir="false" afterPath="$PROJECT_DIR$/computer_player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/human_player.py" beforeDir="false" afterPath="$PROJECT_DIR$/human_player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616505784071</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add game board initializations and first display for all players.">
+      <created>1616508308502</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1616508308502</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,6 +198,7 @@
     <MESSAGE value="Connect game_actions.py to main.py for testing of setup. &#10;Updated testing sandbox for class testing of gameboard children instantiation." />
     <MESSAGE value="Added default fleet placement on fleet game board. Added sample layout to test sandbox." />
     <MESSAGE value="For game setup: added player &amp; player type instantiation." />
-    <option name="LAST_COMMIT_MESSAGE" value="For game setup: added player &amp; player type instantiation." />
+    <MESSAGE value="Add game board initializations and first display for all players." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add game board initializations and first display for all players." />
   </component>
 </project>
