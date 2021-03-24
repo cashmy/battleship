@@ -9,7 +9,7 @@ class Ship:
         self.ship_designator = ship_designator      # Valid entries are: 'D', 'S', 'B', 'C'
         self.strength = size                        # Initial strength is the same as the size
         self.starting_coord = [0, 0]
-        self.axis_direction = [0, 0]
+        self.ending_coord = [0, 0]
         self.ship_placed = False
 
     def update_status(self, hit):

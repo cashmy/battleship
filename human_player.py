@@ -6,6 +6,7 @@ class HumanPlayer(Player):
     def __init__(self, name='', player_number=1, board_size=10):
         super().__init__(name, player_number, board_size)
         self.method_of_shot_determination()
+        self.method_of_ship_placement()
 
     def method_of_shot_determination(self):
         valid_entry = False
@@ -18,12 +19,16 @@ class HumanPlayer(Player):
                 print('I did not understand your choice. Please try again.')
         return self
 
-    # Redefinition of parent class method for this child class
-    # A random method is available for all children which is defined in parent class
-    def method_of_fleet_assignment(self):
-        # inherit random assignment
-        # add allowance for interactive assignment
-        pass
+    def method_of_ship_placement(self):
+        valid_entry = False
+        while not valid_entry:
+            method = input('How would like to place your ships (1=Random 2=Manual Entry)? : ')
+            if method == '1' or method == '2':
+                self.ship_placement_method = method
+                valid_entry = True
+            else:
+                print('I did not understand your choice. Please try again.')
+        return self
 
     def determine_shot(self, opponent_fleet_board):
         if self.target_method == '1':  # Random coordinates inherited from parent class

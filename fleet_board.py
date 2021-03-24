@@ -1,5 +1,7 @@
 from gameboard import GameBoard
 from fleet import Fleet
+import random
+import coordinates
 
 
 class FleetBoard(GameBoard):
@@ -45,13 +47,96 @@ class FleetBoard(GameBoard):
         # ADD Ship Update here
         return hit
 
-    def ship_placement(self, ):
-        # get starting coordinates
-        # determine direction to place  (N, S, E, W)
-        # check for boundaries based upon ship size
-        # Iterate over board for clear place
-        # Raise error if collision occurs
+    def ship_placement(self, method_of_placement='1'):
+        direction = 0
 
-        # If random place - cycle clockwise one space until fit is found
-        # if not fit is found either add two spaces or chose another random point
-        pass
+        for ship in self.fleet.ship_list:
+            collision = True
+            placement_effort = 0
+            while collision and placement_effort <= 5:
+                if method_of_placement == '1' or method_of_placement == '3':
+                    if placement_effort == 0:
+                        print(f'Placing the {ship.ship_type}')
+                    else:
+                        print(f'Placing the {ship.ship_type} attempt number: {placement_effort+1}')
+                    row = random.randint(0, self.board_size-1)
+                    col = random.randint(0, self.board_size-1)
+                    direction_int = random.randint(0, 1)
+                    if direction_int == 0:
+                        direction = 'down'
+                    else:
+                        direction = 'across'
+                elif method_of_placement == '2':
+                    if placement_effort == 0:
+                        print(f'Please give the starting coordinates for the {ship.ship_type}')
+                    else:
+                        print(f'Please give the starting coordinates for the {ship.ship_type} '
+                              f'attempt number: {placement_effort + 1}')
+                        col = coordinates.column_entry(self.board_size)
+                        row = coordinates.row_entry(self.board_size)
+                # Now check for collision
+                collision = self.ship_placement_check(row, col, direction, ship.size)
+                # If collision exists, optionally print error message and then cycle back for another effort
+                if collision:
+                    if method_of_placement == '2':
+                        print('The ship cannot be placed here. Please select another starting location')
+                    placement_effort += 1
+                else:
+                    # place ship and update boards, and ship class
+                    pass
+        return self
+
+    def ship_placement_check(self, row, col, direction, size):
+        # check the initial starting position for a collision - Sets initial value for collision
+        collision = self.collision_check(row, col)
+        if collision:
+            return collision
+
+        # Setup temp start and end locations so the loop will also "Increment
+        if direction == 'down':
+            start_point = row + 1
+            end_point = col + size
+        elif direction == 'across':
+            end_point = row + size
+            start_point = col + 1
+
+        # check for boundaries based upon ship size
+        if end_point > self.board_size:
+            collision = True
+            return collision
+
+        # Iterate over board for clear place
+        counter = start_point
+        while not collision and counter <= end_point:
+            if direction == 'down':
+                collision = self.collision_check(counter, col)
+            else:
+                collision = self.collision_check(row, counter)
+            counter += 1
+        return collision
+
+    def collision_check(self, row, col):
+        collision = False
+        char_check = self.board_layout[row][col]
+        if not char_check == '':
+            collision = True
+        return collision
+
+    def place_ship(self, row, col, direction, ship):
+        # Update ship class with coordinates
+        ship.starting_coord[0] = row
+        ship.starting_coord[1] = col
+        if direction == 'down':
+            ship.ending_coord[0] = row
+            ship.ending_coord[1] = col + ship.size
+        ship.ship_placed = True
+        # Update Fleet board with ship location
+        self.board_layout[row][col] = ship.ship_designator
+        counter = 2
+        while counter <= ship.size:
+            if direction == 'down':
+                self.board_layout[row][counter] = ship.ship_designator
+            else:
+                self.board_layout[counter][row] = ship.ship_designator
+        self.print_board('Fleet board')
+        return self

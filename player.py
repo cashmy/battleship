@@ -17,6 +17,7 @@ class Player:
         #  chosen.method:   "1" = random, "2" = User entry, "3" = AI calculation
         #  Method type is 1 is the only type defined in the parent class.
         #  This method will be overridden in the child classes to include the other options
+        self.ship_placement_method = '1'
 
         self.chosen_row = 0
         self.chosen_col = 0

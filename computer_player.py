@@ -6,6 +6,7 @@ class ComputerPlayer(Player):
     def __init__(self, name='', player_number=2, board_size=10):
         super().__init__(name, player_number, board_size)
         self.method_of_shot_determination()
+        self.method_of_ship_placement()
 
     def method_of_shot_determination(self):
         valid_entry = False
@@ -13,6 +14,16 @@ class ComputerPlayer(Player):
             method = input('How would like the AI to determine its shots (1=Random 3=Intelligent Calculation)? : ')
             if method == '1' or method == '3':
                 self.target_method = method
+                valid_entry = True
+            else:
+                print('I did not understand your choice. Please try again.')
+
+    def method_of_ship_placement(self):
+        valid_entry = False
+        while not valid_entry:
+            method = input('How would like the AI to place its ships (1=Random 3=Intelligent Calculation)? : ')
+            if method == '1' or method == '3':
+                self.ship_placement_method = method
                 valid_entry = True
             else:
                 print('I did not understand your choice. Please try again.')
