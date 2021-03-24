@@ -5,7 +5,7 @@ import letters_to_numbers
 class HumanPlayer(Player):
     def __init__(self, name='', player_number=1, board_size=10):
         super().__init__(name, player_number, board_size)
-        self.chosen_method = self.method_of_shot_determination()
+        self.method_of_shot_determination()
 
     def method_of_shot_determination(self):
         valid_entry = False
@@ -48,7 +48,27 @@ class HumanPlayer(Player):
             end_letter = 'T'
         else:
             end_letter = 'J'
-        col_letter: str = input(f'Enter the desired column (A-{end_letter})')
-        self.chosen_col = letters_to_numbers(col_letter)
-        self.chosen_row = input(f'Enter the desired row (1-{self.shot_board.board_size}): ')
+
+        # Enter Column
+        valid_entry = False
+        while not valid_entry:
+            col_letter: str = input(f'Enter the desired column (A-{end_letter}): ')
+            col_int = letters_to_numbers.l_t_n(col_letter)
+            if col_letter == '' or (col_int < 1 or col_int > self.shot_board.board_size):
+                print('I did not understand your choice. Please try again.')
+            else:
+                self.chosen_col = col_int - 1
+                valid_entry = True
+
+        # Enter Row
+        valid_entry = False
+        while not valid_entry:
+            row = input(f'Enter the desired row (1-{self.shot_board.board_size}): ')
+            row_int = int(row) - 1
+            if row == '' or (row_int < 0 or row_int >= self.shot_board.board_size):
+                print('I did not understand your choice. Please try again.')
+            else:
+                self.chosen_row = row_int
+                valid_entry = True
+
         return self

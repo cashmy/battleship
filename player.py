@@ -1,6 +1,7 @@
 from shot_board import ShotBoard
 from fleet_board import FleetBoard
 import random
+import letters_to_numbers
 
 
 class Player:
@@ -37,6 +38,6 @@ class Player:
         # Random method (to be inherited in child classes
         self.chosen_row = random.randint(0, self.shot_board.board_size-1)
         self.chosen_col = random.randint(0, self.shot_board.board_size-1)
-        # hit = opponent_fleet_board.check_board(self.chosen_row, self.chosen_col)
-        # self.shot_board.update_board(self.chosen_row, self.chosen_col, hit)
+        letter = letters_to_numbers.n_t_l(self.chosen_col+1)
+        print(f'A random shot was fired to location {letter}-{self.chosen_row+1}')
         pass

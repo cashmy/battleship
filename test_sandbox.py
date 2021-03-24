@@ -1,14 +1,4 @@
-from fleet_board import FleetBoard
-from shot_board import ShotBoard
+import letters_to_numbers
 
-my_shot_board = ShotBoard(10)
-
-my_shot_board.update_board(1, 1, False)
-my_shot_board.update_board(3, 4, True)
-my_shot_board.update_board(9, 9, False)
-my_shot_board.update_board(10, 10, False)
-my_shot_board.print_board()
-
-my_fleet_board = FleetBoard(10)
-my_fleet_board.default_placement()
-my_fleet_board.print_board()
+number = letters_to_numbers.l_t_n('D')
+print(f'Number is: {number}')

@@ -5,7 +5,7 @@ from player import Player
 class ComputerPlayer(Player):
     def __init__(self, name='', player_number=2, board_size=10):
         super().__init__(name, player_number, board_size)
-        self.chosen_method = self.method_of_shot_determination()
+        self.method_of_shot_determination()
 
     def method_of_shot_determination(self):
         valid_entry = False
@@ -16,7 +16,6 @@ class ComputerPlayer(Player):
                 valid_entry = True
             else:
                 print('I did not understand your choice. Please try again.')
-        return self
 
     @staticmethod
     def validate_name(name, player_number):
@@ -43,3 +42,6 @@ class ComputerPlayer(Player):
             # Some error occurred. Revert chosen method to default
             self.chosen_method = '1'
 
+        hit = self.fleet_board.check_board(self.chosen_row, self.chosen_col)
+        self.shot_board.update_board(self.chosen_row, self.chosen_col, hit)
+        self.shot_board.print_board()
