@@ -1,6 +1,7 @@
 # Game activity - may not need to be a class
 from human_player import HumanPlayer
 from computer_player import ComputerPlayer
+import letters_to_numbers
 
 game_player = []
 
@@ -41,27 +42,28 @@ def get_board_size():
 
 # run the game turn
 def game_turn():
-    for player in game_player:
-        print(f'*** {player.name} *** your shot board looks like this: ')
-        player.shot_board.print_board()
-        print('And your fleet board looks like this:')
-        player.fleet_board.print_board()
-        input('When ready press the enter key for the next player')
-        print('\n')
-        # clear()
-    print(f'{game_player[0].name}, we will take a turn at F-7 (6,5)')
-    hit = game_player[0].fleet_board.check_board(6, 5)
-    game_player[0].shot_board.update_board(6, 5, hit)
-    print(f'{game_player[0].name}, we will take a turn at F-6 (6,4)')
-    hit = game_player[0].fleet_board.check_board(6, 4)
-    game_player[0].shot_board.update_board(6, 4, hit)
-    game_player[0].shot_board.print_board()
+    turn_counter = 1
+    game_over = False
+    while not game_over:
+        print(f'==================== TURN {turn_counter} ====================')
 
+        for player in game_player:
+            print(f'*** {player.name} *** your shot board looks like this: ')
+            player.shot_board.print_board()
+            print('And your fleet board looks like this:')
+            player.fleet_board.print_board()
+            input('When ready press the enter key for the next player')
+            print('\n')
+            # clear()
+            player.determine_shot(player.shot_board.board_size)
 
-# Helper function to convert a letter to its numerical equivalent (1-26)
-def letters_to_numbers(letter):
-    number = ord(letter) - 96
-    return number
+    # print(f'{game_player[0].name}, we will take a turn at F-7 (6,5)')
+    # hit = game_player[0].fleet_board.check_board(6, 5)
+    # game_player[0].shot_board.update_board(6, 5, hit)
+    # print(f'{game_player[0].name}, we will take a turn at F-6 (6,4)')
+    # hit = game_player[0].fleet_board.check_board(6, 4)
+    # game_player[0].shot_board.update_board(6, 4, hit)
+    # game_player[0].shot_board.print_board()
 
 
 # Pycharm console clear screen simulation

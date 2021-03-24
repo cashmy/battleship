@@ -25,15 +25,14 @@ class HumanPlayer(Player):
         # add allowance for interactive assignment
         pass
 
-    def determine_shot(self, board_size, method_type, opponent_fleet_board):
-        self.chosen_method = method_type
-        if method_type == '1':  # Random coordinates inherited from parent class
-            super().determine_shot(board_size, method_type, opponent_fleet_board)
-        elif method_type == '2':
+    def determine_shot(self, opponent_fleet_board):
+        if self.chosen_method == '1':  # Random coordinates inherited from parent class
+            super().determine_shot(opponent_fleet_board)
+        elif self.chosen_method == '2':
             # define & use player interaction here:
             self.ui_take_a_shot()
             pass
-        elif method_type == 3:
+        elif self.chosen_method == 3:
             # define auto AI Calc here for optimum fire
             pass
         else:

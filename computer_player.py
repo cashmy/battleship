@@ -31,15 +31,13 @@ class ComputerPlayer(Player):
         # FUTURE SPRINT: Add allowance for AI calculation for best next placement
         pass
 
-    def determine_shot(self, board_size, method_type, opponent_fleet_board):
+    def determine_shot(self, opponent_fleet_board):
         # Random - Override "2=user interaction" if passed, to "1=random" for AI
-        if method_type == '1' or method_type == '2':
+        if self.chosen_method == '1' or self.chosen_method == '2':
             # Call parent class base version actions
-            super().determine_shot(board_size, method_type, opponent_fleet_board)
-            self.chosen_method = '1'
-        elif method_type == 3:
+            super().determine_shot(opponent_fleet_board)
+        elif self.chosen_method == 3:
             # define auto AI Calc here for optimum fire
-            self.chosen_method = '3'
             pass
         else:
             # Some error occurred. Revert chosen method to default

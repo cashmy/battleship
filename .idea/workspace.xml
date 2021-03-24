@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8a26558-97e8-4dbe-8648-632186573479" name="Default Changelist" comment="Add clear screen simulation for Pycharm">
-      <change afterPath="$PROJECT_DIR$/letters_to_numbers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f8a26558-97e8-4dbe-8648-632186573479" name="Default Changelist" comment="Added basic shot determination methods: Random and UI">
       <change beforePath="$PROJECT_DIR$/computer_player.py" beforeDir="false" afterPath="$PROJECT_DIR$/computer_player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fleet.py" beforeDir="false" afterPath="$PROJECT_DIR$/fleet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fleet_board.py" beforeDir="false" afterPath="$PROJECT_DIR$/fleet_board.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_actions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/human_player.py" beforeDir="false" afterPath="$PROJECT_DIR$/human_player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
     </list>
@@ -196,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616532997038</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added basic shot determination methods: Random and UI">
+      <created>1616597994800</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1616597994800</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,14 +223,15 @@
     <MESSAGE value="Add game board initializations and first display for all players." />
     <MESSAGE value="Add clear screen simulation for Pycharm" />
     <MESSAGE value="Added initial code for shot-determine method in parent class and overridden definitions in child classes. Still need user-player interaction code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added initial code for shot-determine method in parent class and overridden definitions in child classes. Still need user-player interaction code." />
+    <MESSAGE value="Added basic shot determination methods: Random and UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added basic shot determination methods: Random and UI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/game_actions.py</url>
-          <line>52</line>
+          <line>60</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -238,7 +241,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/game_actions.py</url>
-          <line>17</line>
+          <line>18</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
