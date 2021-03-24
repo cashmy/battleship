@@ -10,6 +10,7 @@ class Ship:
         self.strength = size                        # Initial strength is the same as the size
         self.starting_coord = [0, 0]
         self.axis_direction = [0, 0]
+        self.ship_placed = False
 
     def update_status(self, hit):
         # this will track the remaining points before being sunk

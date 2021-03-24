@@ -42,12 +42,16 @@ class FleetBoard(GameBoard):
         for char in ship_char_list:
             if char_check == char:
                 hit = True  # Always assume hit for testing purposes
-
-        # if hit:
-        #     print('HIT')
-        # else:
-        #     print('Miss')
-
         # ADD Ship Update here
-
         return hit
+
+    def ship_placement(self, ):
+        # get starting coordinates
+        # determine direction to place  (N, S, E, W)
+        # check for boundaries based upon ship size
+        # Iterate over board for clear place
+        # Raise error if collision occurs
+
+        # If random place - cycle clockwise one space until fit is found
+        # if not fit is found either add two spaces or chose another random point
+        pass

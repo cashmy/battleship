@@ -12,7 +12,7 @@ class ComputerPlayer(Player):
         while not valid_entry:
             method = input('How would like the AI to determine its shots (1=Random 3=Intelligent Calculation)? : ')
             if method == '1' or method == '3':
-                self.chosen_method = method
+                self.target_method = method
                 valid_entry = True
             else:
                 print('I did not understand your choice. Please try again.')
@@ -32,15 +32,15 @@ class ComputerPlayer(Player):
 
     def determine_shot(self, opponent_fleet_board):
         # Random - Override "2=user interaction" if passed, to "1=random" for AI
-        if self.chosen_method == '1' or self.chosen_method == '2':
+        if self.target_method == '1' or self.target_method == '2':
             # Call parent class base version actions
             super().determine_shot(opponent_fleet_board)
-        elif self.chosen_method == 3:
+        elif self.target_method == 3:
             # define auto AI Calc here for optimum fire
             pass
         else:
             # Some error occurred. Revert chosen method to default
-            self.chosen_method = '1'
+            self.target_method = '1'
 
         hit = self.fleet_board.check_board(self.chosen_row, self.chosen_col)
         self.shot_board.update_board(self.chosen_row, self.chosen_col, hit)

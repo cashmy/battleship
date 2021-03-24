@@ -12,7 +12,7 @@ class HumanPlayer(Player):
         while not valid_entry:
             method = input('How would like to determine your shots (1=Random 2=Manual Entry)? : ')
             if method == '1' or method == '2':
-                self.chosen_method = method
+                self.target_method = method
                 valid_entry = True
             else:
                 print('I did not understand your choice. Please try again.')
@@ -26,18 +26,18 @@ class HumanPlayer(Player):
         pass
 
     def determine_shot(self, opponent_fleet_board):
-        if self.chosen_method == '1':  # Random coordinates inherited from parent class
+        if self.target_method == '1':  # Random coordinates inherited from parent class
             super().determine_shot(opponent_fleet_board)
-        elif self.chosen_method == '2':
+        elif self.target_method == '2':
             # define & use player interaction here:
             self.ui_take_a_shot()
             pass
-        elif self.chosen_method == 3:
+        elif self.target_method == 3:
             # define auto AI Calc here for optimum fire
             pass
         else:
             # Some error occurred. Revert chosen method to default
-            self.chosen_method = '1'
+            self.target_method = '1'
 
         hit = self.fleet_board.check_board(self.chosen_row, self.chosen_col)
         self.shot_board.update_board(self.chosen_row, self.chosen_col, hit)

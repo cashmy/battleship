@@ -13,7 +13,7 @@ class Player:
         self.shot_board = ShotBoard(board_size)  # Record of players hits against opponent
         self.fleet_board = FleetBoard(board_size)  # stores fleet location and opponent's hits
 
-        self.chosen_method = '1'  # Default to "random" for this games chosen method
+        self.target_method = '1'  # Default to "random" for this games chosen method
         #  chosen.method:   "1" = random, "2" = User entry, "3" = AI calculation
         #  Method type is 1 is the only type defined in the parent class.
         #  This method will be overridden in the child classes to include the other options
