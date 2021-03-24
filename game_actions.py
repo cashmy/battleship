@@ -13,7 +13,7 @@ def game_setup():
     while counter < int(number_of_players):
         valid_entry = False
         while not valid_entry:
-            player_type = input(f'Player {counter + 1}, what type of player shall you be (H=Human, A=AI)?:')
+            player_type = input(f'Player {counter + 1}, what type of player shall you be (H=Human, A=AI)?: ')
             if player_type == 'H':
                 game_player.append(HumanPlayer('', counter, board_size))
                 valid_entry = True
@@ -42,12 +42,20 @@ def get_board_size():
 # run the game turn
 def game_turn():
     for player in game_player:
-        print(f'{player.name} your shot board looks like this: ')
+        print(f'*** {player.name} *** your shot board looks like this: ')
         player.shot_board.print_board()
         print('And your fleet board looks like this:')
         player.fleet_board.print_board()
         input('When ready press the enter key for the next player')
-        clear()
+        print('\n')
+        # clear()
+    print(f'{game_player[0].name}, we will take a turn at F-7 (6,5)')
+    hit = game_player[0].fleet_board.check_board(6, 5)
+    game_player[0].shot_board.update_board(6, 5, hit)
+    print(f'{game_player[0].name}, we will take a turn at F-6 (6,4)')
+    hit = game_player[0].fleet_board.check_board(6, 4)
+    game_player[0].shot_board.update_board(6, 4, hit)
+    game_player[0].shot_board.print_board()
 
 
 # Helper function to convert a letter to its numerical equivalent (1-26)

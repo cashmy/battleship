@@ -11,6 +11,11 @@ class Player:
         self.fleet = ''  # Stores ships and each ships status
         self.shot_board = ShotBoard(board_size)  # Record of players hits against opponent
         self.fleet_board = FleetBoard(board_size)  # stores fleet location and opponent's hits
+        self.chosen_method = '1'  # Default to "random" for this games chosen method
+        self.chosen_row = 0
+        self.chosen_col = 0
+        # ADDED FOR TEST - REMOVE for Production
+        self.fleet_board.default_placement()
 
     @staticmethod
     def validate_name(name, player_number):
@@ -29,8 +34,8 @@ class Player:
         #  This method will be overridden in the child classes to include the other options
         #  and the condition check, based upon the method_type will be used there.
         # Random method (to be inherited in child classes
-        row = random.randint(0, board_size-1)
-        col = random.randint(0, board_size-1)
-        hit = opponent_fleet_board.check_board(row, col)
-        self.shot_board.update_board(row, col, hit)
+        self.chosen_row = random.randint(0, board_size-1)
+        self.chosen_col = random.randint(0, board_size-1)
+        # hit = opponent_fleet_board.check_board(self.chosen_row, self.chosen_col)
+        # self.shot_board.update_board(self.chosen_row, self.chosen_col, hit)
         pass

@@ -14,6 +14,7 @@ class GameBoard:
         # DO NOT USE THE "shallow" definition method:
         # self.board_layout = [[0]*cols]*rows]
         # The "reference" will cause a duplication of an element in a row to be same in EVERY row.
+        return self
 
     def print_board(self):
         # This will display my hits and misses
@@ -35,12 +36,14 @@ class GameBoard:
                 print(f'{counter}) {new_row}')
             counter += 1
         print('==========')
+        return self
 
-    def update_board(self, row, col, hit):
+    def update_board(self, col, row, hit):
         # Update with hits and misses
         # Update coordinate with miss '~' , or hit '*'
         if hit:
             action = '*'
         else:
             action = '~'
-        self.board_layout[row-1][col-1] = action
+        self.board_layout[col][row] = action
+        return self

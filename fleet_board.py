@@ -9,7 +9,7 @@ class FleetBoard(GameBoard):
         self.initialize_board()
         self.fleet = Fleet()  # Initialize the fleet
 
-    # This method is used for testing.
+    # This method is used for TDD testing.
     def default_placement(self):
         # Destroyer
         self.board_layout[1][2] = 'D'
@@ -32,9 +32,15 @@ class FleetBoard(GameBoard):
         self.board_layout[7][3] = 'C'
         self.board_layout[8][3] = 'C'
         self.board_layout[9][3] = 'C'
+        return self
 
-    @staticmethod
-    def check_board(row, col):
-        # add logic for check here
-        hit = True  # Always assume hit for testing purposes
+    def check_board(self, row, col):
+        ship_char_list = ['D', 'S', 'B', 'C']
+        # rtv the current value in the board
+        char_check = self.board_layout[row][col]
+        hit = False
+        for char in ship_char_list:
+            if char_check == char:
+                hit = True  # Always assume hit for testing purposes
+
         return hit

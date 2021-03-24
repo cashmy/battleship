@@ -5,7 +5,18 @@ from player import Player
 class ComputerPlayer(Player):
     def __init__(self, name='', player_number=2, board_size=10):
         super().__init__(name, player_number, board_size)
-        pass
+        self.chosen_method = self.method_of_shot_determination()
+
+    def method_of_shot_determination(self):
+        valid_entry = False
+        while not valid_entry:
+            method = input('How would like the AI to determine its shots (1=Random 3=Intelligent Calculation)? : ')
+            if method == '1' or method == '3':
+                self.chosen_method = method
+                valid_entry = True
+            else:
+                print('I did not understand your choice. Please try again.')
+        return self
 
     @staticmethod
     def validate_name(name, player_number):
@@ -21,9 +32,16 @@ class ComputerPlayer(Player):
         pass
 
     def determine_shot(self, board_size, method_type, opponent_fleet_board):
-        if method_type == '1' or method_type == '2':  # Random - Override user interaction to random for AI
+        # Random - Override "2=user interaction" if passed, to "1=random" for AI
+        if method_type == '1' or method_type == '2':
             # Call parent class base version actions
             super().determine_shot(board_size, method_type, opponent_fleet_board)
-        else:
-            # define action here
+            self.chosen_method = '1'
+        elif method_type == 3:
+            # define auto AI Calc here for optimum fire
+            self.chosen_method = '3'
             pass
+        else:
+            # Some error occurred. Revert chosen method to default
+            self.chosen_method = '1'
+

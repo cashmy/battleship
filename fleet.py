@@ -15,4 +15,4 @@ class Fleet:
         self.ship_list.append(Ship(3, 'submarine', 'S'))
         self.ship_list.append(Ship(4, 'battleship', 'B'))
         self.ship_list.append(Ship(5, 'carrier', 'C'))
-
+        return self
