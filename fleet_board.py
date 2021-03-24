@@ -43,8 +43,11 @@ class FleetBoard(GameBoard):
             if char_check == char:
                 hit = True  # Always assume hit for testing purposes
 
-        if hit:
-            print('HIT')
-        else:
-            print('Miss')
+        # if hit:
+        #     print('HIT')
+        # else:
+        #     print('Miss')
+
+        # ADD Ship Update here
+
         return hit

@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8a26558-97e8-4dbe-8648-632186573479" name="Default Changelist" comment="Removed intermediate testing steps and its needed extra variables, then refactored to use class variables.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f8a26558-97e8-4dbe-8648-632186573479" name="Default Changelist" comment="Finished up basic shot targeting and reporting of hits/misses.">
       <change beforePath="$PROJECT_DIR$/computer_player.py" beforeDir="false" afterPath="$PROJECT_DIR$/computer_player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fleet_board.py" beforeDir="false" afterPath="$PROJECT_DIR$/fleet_board.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/human_player.py" beforeDir="false" afterPath="$PROJECT_DIR$/human_player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/letters_to_numbers.py" beforeDir="false" afterPath="$PROJECT_DIR$/letters_to_numbers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_sandbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_sandbox.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616598927619</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Finished up basic shot targeting and reporting of hits/misses.">
+      <created>1616608486861</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1616608486861</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -236,7 +240,8 @@
     <MESSAGE value="Added initial code for shot-determine method in parent class and overridden definitions in child classes. Still need user-player interaction code." />
     <MESSAGE value="Added basic shot determination methods: Random and UI" />
     <MESSAGE value="Removed intermediate testing steps and its needed extra variables, then refactored to use class variables." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed intermediate testing steps and its needed extra variables, then refactored to use class variables." />
+    <MESSAGE value="Finished up basic shot targeting and reporting of hits/misses." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished up basic shot targeting and reporting of hits/misses." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

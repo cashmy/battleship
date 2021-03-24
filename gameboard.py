@@ -16,7 +16,8 @@ class GameBoard:
         # The "reference" will cause a duplication of an element in a row to be same in EVERY row.
         return self
 
-    def print_board(self):
+    def print_board(self, board_type_desc):
+        print(f'Your {board_type_desc} looks like this:')
         # This will display my hits and misses
         letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T']
         counter = 0
@@ -43,7 +44,9 @@ class GameBoard:
         # Update coordinate with miss '~' , or hit '*'
         if hit:
             action = '*'
+            print('HIT')
         else:
             action = '~'
+            print('Miss')
         self.board_layout[col][row] = action
         return self

@@ -50,10 +50,9 @@ def game_turn():
         print(f'==================== TURN {turn_counter} ====================')
         index = 0
         for player in game_player:
-            print(f'*** {player.name} *** your shot board looks like this: ')
-            player.shot_board.print_board()
-            print('And your fleet board looks like this:')
-            player.fleet_board.print_board()
+            print(f'*** {player.name} *** ')
+            player.shot_board.print_board('shot board')
+            player.fleet_board.print_board('fleet board')
             print('\n')
             opponent_index = determine_opponent(index)
             player.determine_shot(game_player[opponent_index])

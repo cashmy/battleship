@@ -44,4 +44,4 @@ class ComputerPlayer(Player):
 
         hit = self.fleet_board.check_board(self.chosen_row, self.chosen_col)
         self.shot_board.update_board(self.chosen_row, self.chosen_col, hit)
-        self.shot_board.print_board()
+        self.shot_board.print_board('shot board')
