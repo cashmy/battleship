@@ -42,10 +42,12 @@ class FleetBoard(GameBoard):
         # rtv the current value in the board
         char_check = self.board_layout[row][col]
         hit = False
+        index = 0
         for char in ship_char_list:
             if char_check == char:
-                hit = True  # Always assume hit for testing purposes
-        # ADD Ship Update here
+                hit = True
+                self.fleet.update_ship(index)
+            index += 1
         return hit
 
     def ship_placement(self, method_of_placement='1'):
@@ -60,7 +62,7 @@ class FleetBoard(GameBoard):
                 if placement_effort < 1:
                     self.print_board('Fleet Board')
                 # Random generation of ship placement
-                if method_of_placement == '1' or method_of_placement == '3':
+                if method_of_placement == '1' or method_of_placement == '3':  # Random or AI Calc (for now)
                     if placement_effort == 0:
                         print(f'Placing the {ship.ship_type}')
                     else:
@@ -147,7 +149,6 @@ class FleetBoard(GameBoard):
             ship.ending_coord[1] = col
         ship.ship_placed = True
         # Update Fleet board with ship location
-        # self.board_layout[row][col] = ship.ship_designator
         counter = 0
         while counter < ship.size:
             if direction == 'down':

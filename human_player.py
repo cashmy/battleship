@@ -45,7 +45,8 @@ class HumanPlayer(Player):
             # Some error occurred. Revert chosen method to default
             self.target_method = '1'
 
-        hit = self.fleet_board.check_board(self.chosen_row, self.chosen_col)
+        hit = opponent_fleet_board.fleet_board.check_board(self.chosen_row, self.chosen_col)
+        opponent_fleet_board.fleet_board.update_board(self.chosen_row, self.chosen_col, hit)
         self.shot_board.update_board(self.chosen_row, self.chosen_col, hit)
         self.shot_board.print_board('shot board')
 

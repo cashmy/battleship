@@ -36,7 +36,7 @@ class Player:
         pass
 
     def determine_shot(self, opponent_fleet_board):
-        # Random method (to be inherited in child classes
+        # Random method (to be inherited in child classes)
         self.chosen_row = random.randint(0, self.shot_board.board_size-1)
         self.chosen_col = random.randint(0, self.shot_board.board_size-1)
         letter = letters_to_numbers.n_t_l(self.chosen_col+1)

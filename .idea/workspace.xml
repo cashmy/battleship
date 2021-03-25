@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8a26558-97e8-4dbe-8648-632186573479" name="Default Changelist" comment="Refactored coordinates entry for human player to use common coordinates.py function file">
+    <list default="true" id="f8a26558-97e8-4dbe-8648-632186573479" name="Default Changelist" comment="Restored code deleted code from 'happy fingers removing too much'">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/computer_player.py" beforeDir="false" afterPath="$PROJECT_DIR$/computer_player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fleet.py" beforeDir="false" afterPath="$PROJECT_DIR$/fleet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fleet_board.py" beforeDir="false" afterPath="$PROJECT_DIR$/fleet_board.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_actions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/human_player.py" beforeDir="false" afterPath="$PROJECT_DIR$/human_player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ship.py" beforeDir="false" afterPath="$PROJECT_DIR$/ship.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +265,21 @@
       <option name="project" value="LOCAL" />
       <updated>1616637234968</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Restored code deleted code from 'happy fingers removing too much'">
+      <created>1616637578781</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1616637578781</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Restored code deleted code from 'happy fingers removing too much'">
+      <created>1616638054003</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1616638054003</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -292,6 +313,23 @@
     <MESSAGE value="Debugged fleet placement functions: specifically coordinate prompting and updating" />
     <MESSAGE value="Corrected ship overlaying another collision error." />
     <MESSAGE value="Refactored coordinates entry for human player to use common coordinates.py function file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored coordinates entry for human player to use common coordinates.py function file" />
+    <MESSAGE value="Restored code deleted code from 'happy fingers removing too much'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restored code deleted code from 'happy fingers removing too much'" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fleet_board.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/human_player.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -12,7 +12,11 @@ class Ship:
         self.ending_coord = [0, 0]
         self.ship_placed = False
 
-    def update_status(self, hit):
+    def update_status(self):
+        sunk = False
         # this will track the remaining points before being sunk
-        self.strength -= hit
-        pass
+        self.strength -= 1
+        if self.strength <= 0:
+            sunk = True
+        return sunk
+

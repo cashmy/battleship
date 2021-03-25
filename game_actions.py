@@ -58,10 +58,13 @@ def game_turn():
             opponent_index = determine_opponent(index)
             player.determine_shot(game_player[opponent_index])
             index += 1
-            input('When ready press the enter key for the next player')
+            entry = input('When ready press the enter key for the next player: ')
+            if entry == 'X' or entry == 'x':
+                game_over = True
+                return
             clear_screen.clear()
         turn_counter += 1
-        game_over = True
+        # game_over = True
 
 
 def determine_opponent(index):
