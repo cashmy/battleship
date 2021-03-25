@@ -108,7 +108,7 @@ class FleetBoard(GameBoard):
         # Starting point has been checked, so continue with row+1  or col+1 as counter initializer
         if direction == 'down':
             start_point = row + 1
-            end_point = row + size - 1
+            end_point = row + size - 1  # ship spaces are inclusive only, thus the -1
         elif direction == 'across':
             start_point = col + 1
             end_point = col + size - 1

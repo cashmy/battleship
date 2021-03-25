@@ -1,5 +1,6 @@
 from player import Player
 import letters_to_numbers
+import coordinates
 
 
 class HumanPlayer(Player):
@@ -49,32 +50,9 @@ class HumanPlayer(Player):
         self.shot_board.update_board(self.chosen_row, self.chosen_col, hit)
         self.shot_board.print_board('shot board')
 
-    def ui_take_a_shot(self):
-        if self.shot_board.board_size == 20:
-            end_letter = 'T'
-        else:
-            end_letter = 'J'
-
         # Enter Column
-        valid_entry = False
-        while not valid_entry:
-            col_letter: str = input(f'Enter the desired column (A-{end_letter}): ')
-            col_int = letters_to_numbers.l_t_n(col_letter)
-            if col_letter == '' or (col_int < 1 or col_int > self.shot_board.board_size):
-                print('I did not understand your choice. Please try again.')
-            else:
-                self.chosen_col = col_int - 1
-                valid_entry = True
-
+        self.chosen_col = coordinates.column_entry(self.shot_board.board_size)
         # Enter Row
-        valid_entry = False
-        while not valid_entry:
-            row = input(f'Enter the desired row (1-{self.shot_board.board_size}): ')
-            row_int = int(row) - 1
-            if row == '' or (row_int < 0 or row_int >= self.shot_board.board_size):
-                print('I did not understand your choice. Please try again.')
-            else:
-                self.chosen_row = row_int
-                valid_entry = True
+        self.chosen_row = coordinates.row_entry(self.shot_board.board_size)
 
         return self
