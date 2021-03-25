@@ -1,6 +1,6 @@
 from player import Player
-import letters_to_numbers
 import coordinates
+
 
 class HumanPlayer(Player):
     def __init__(self, name='', player_number=1, board_size=10):
