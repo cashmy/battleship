@@ -28,4 +28,19 @@ def row_entry(board_size):
             print('I did not understand your choice. Please try again.')
         else:
             valid_entry = True
-    return row_int-1
+    return row_int
+
+
+def get_direction():
+    valid_entry = False
+    while not valid_entry:
+        entry = input('Which way shall your ship run (A=across D=Down)?: ')
+        if not entry == 'A' and not entry == 'D':
+            print('I did not understand your choice. Please try again.')
+        else:
+            valid_entry = True
+    if entry == 'A':
+        direction = 'across'
+    else:
+        direction = 'down'
+    return direction

@@ -22,7 +22,7 @@ class Player:
         self.chosen_row = 0
         self.chosen_col = 0
         # ADDED FOR TEST - REMOVE for Production
-        self.fleet_board.default_placement()
+        # self.fleet_board.default_placement()
 
     @staticmethod
     def validate_name(name, player_number):

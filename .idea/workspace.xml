@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8a26558-97e8-4dbe-8648-632186573479" name="Default Changelist" comment="Rename chosen_method to target_method&#10;Added class for intelligent AI shot determination&#10;Add initial coding structure for Fleet placement.">
-      <change afterPath="$PROJECT_DIR$/coordinates.py" afterDir="false" />
+    <list default="true" id="f8a26558-97e8-4dbe-8648-632186573479" name="Default Changelist" comment="Created coordinates.py function for DRY methodology.&#10;Changed Player class variable to add ship_placement method.&#10;Added ship placement methods to Computer and Human player classes.">
+      <change afterPath="$PROJECT_DIR$/clear_screen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/computer_player.py" beforeDir="false" afterPath="$PROJECT_DIR$/computer_player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coordinates.py" beforeDir="false" afterPath="$PROJECT_DIR$/coordinates.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fleet_board.py" beforeDir="false" afterPath="$PROJECT_DIR$/fleet_board.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_actions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/human_player.py" beforeDir="false" afterPath="$PROJECT_DIR$/human_player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ship.py" beforeDir="false" afterPath="$PROJECT_DIR$/ship.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616611009705</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Created coordinates.py function for DRY methodology.&#10;Changed Player class variable to add ship_placement method.&#10;Added ship placement methods to Computer and Human player classes.">
+      <created>1616625043923</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1616625043923</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -259,23 +266,23 @@
     <MESSAGE value="Finished up basic shot targeting and reporting of hits/misses." />
     <MESSAGE value="Encapsulated print() of board descriptions within the class." />
     <MESSAGE value="Rename chosen_method to target_method&#10;Added class for intelligent AI shot determination&#10;Add initial coding structure for Fleet placement." />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename chosen_method to target_method&#10;Added class for intelligent AI shot determination&#10;Add initial coding structure for Fleet placement." />
+    <MESSAGE value="Created coordinates.py function for DRY methodology.&#10;Changed Player class variable to add ship_placement method.&#10;Added ship placement methods to Computer and Human player classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created coordinates.py function for DRY methodology.&#10;Changed Player class variable to add ship_placement method.&#10;Added ship placement methods to Computer and Human player classes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/human_player.py</url>
-          <line>72</line>
+          <line>73</line>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fleet_board.py</url>
+          <line>144</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="game_player" language="Python" />
-        <watch expression="HumanPlayer" language="Python" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

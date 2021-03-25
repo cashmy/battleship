@@ -1,6 +1,7 @@
 # Game activity - may not need to be a class
 from human_player import HumanPlayer
 from computer_player import ComputerPlayer
+import clear_screen
 # import letters_to_numbers
 
 game_player = []
@@ -58,17 +59,9 @@ def game_turn():
             player.determine_shot(game_player[opponent_index])
             index += 1
             input('When ready press the enter key for the next player')
-            clear()
+            clear_screen.clear()
         turn_counter += 1
         game_over = True
-
-
-# Pycharm console clear screen simulation
-def clear():
-    counter = 0
-    while counter <= 69:
-        print('\n')
-        counter += 1
 
 
 def determine_opponent(index):

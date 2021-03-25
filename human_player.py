@@ -7,6 +7,7 @@ class HumanPlayer(Player):
         super().__init__(name, player_number, board_size)
         self.method_of_shot_determination()
         self.method_of_ship_placement()
+        self.fleet_board.ship_placement(self.ship_placement_method)
 
     def method_of_shot_determination(self):
         valid_entry = False
