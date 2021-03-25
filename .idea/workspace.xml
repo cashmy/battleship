@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8a26558-97e8-4dbe-8648-632186573479" name="Default Changelist" comment="Corrected ship overlaying another collision error.">
-      <change beforePath="$PROJECT_DIR$/fleet_board.py" beforeDir="false" afterPath="$PROJECT_DIR$/fleet_board.py" afterDir="false" />
+    <list default="true" id="f8a26558-97e8-4dbe-8648-632186573479" name="Default Changelist" comment="Refactored coordinates entry for human player to use common coordinates.py function file">
       <change beforePath="$PROJECT_DIR$/human_player.py" beforeDir="false" afterPath="$PROJECT_DIR$/human_player.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -245,7 +244,21 @@
       <option name="project" value="LOCAL" />
       <updated>1616636658662</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Refactored coordinates entry for human player to use common coordinates.py function file">
+      <created>1616637223997</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1616637223997</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Refactored coordinates entry for human player to use common coordinates.py function file">
+      <created>1616637234968</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1616637234968</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -278,6 +291,7 @@
     <MESSAGE value="Created coordinates.py function for DRY methodology.&#10;Changed Player class variable to add ship_placement method.&#10;Added ship placement methods to Computer and Human player classes." />
     <MESSAGE value="Debugged fleet placement functions: specifically coordinate prompting and updating" />
     <MESSAGE value="Corrected ship overlaying another collision error." />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected ship overlaying another collision error." />
+    <MESSAGE value="Refactored coordinates entry for human player to use common coordinates.py function file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored coordinates entry for human player to use common coordinates.py function file" />
   </component>
 </project>

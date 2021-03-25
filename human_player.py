@@ -2,7 +2,6 @@ from player import Player
 import letters_to_numbers
 import coordinates
 
-
 class HumanPlayer(Player):
     def __init__(self, name='', player_number=1, board_size=10):
         super().__init__(name, player_number, board_size)
@@ -50,9 +49,9 @@ class HumanPlayer(Player):
         self.shot_board.update_board(self.chosen_row, self.chosen_col, hit)
         self.shot_board.print_board('shot board')
 
+    def ui_take_a_shot(self):
         # Enter Column
         self.chosen_col = coordinates.column_entry(self.shot_board.board_size)
         # Enter Row
         self.chosen_row = coordinates.row_entry(self.shot_board.board_size)
-
         return self
