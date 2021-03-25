@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8a26558-97e8-4dbe-8648-632186573479" name="Default Changelist" comment="Created coordinates.py function for DRY methodology.&#10;Changed Player class variable to add ship_placement method.&#10;Added ship placement methods to Computer and Human player classes.">
-      <change afterPath="$PROJECT_DIR$/clear_screen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coordinates.py" beforeDir="false" afterPath="$PROJECT_DIR$/coordinates.py" afterDir="false" />
+    <list default="true" id="f8a26558-97e8-4dbe-8648-632186573479" name="Default Changelist" comment="Debugged fleet placement functions: specifically coordinate prompting and updating">
+      <change beforePath="$PROJECT_DIR$/computer_player.py" beforeDir="false" afterPath="$PROJECT_DIR$/computer_player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fleet_board.py" beforeDir="false" afterPath="$PROJECT_DIR$/fleet_board.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_actions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/human_player.py" beforeDir="false" afterPath="$PROJECT_DIR$/human_player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616625043923</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Debugged fleet placement functions: specifically coordinate prompting and updating">
+      <created>1616631504223</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1616631504223</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -267,7 +269,8 @@
     <MESSAGE value="Encapsulated print() of board descriptions within the class." />
     <MESSAGE value="Rename chosen_method to target_method&#10;Added class for intelligent AI shot determination&#10;Add initial coding structure for Fleet placement." />
     <MESSAGE value="Created coordinates.py function for DRY methodology.&#10;Changed Player class variable to add ship_placement method.&#10;Added ship placement methods to Computer and Human player classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created coordinates.py function for DRY methodology.&#10;Changed Player class variable to add ship_placement method.&#10;Added ship placement methods to Computer and Human player classes." />
+    <MESSAGE value="Debugged fleet placement functions: specifically coordinate prompting and updating" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debugged fleet placement functions: specifically coordinate prompting and updating" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -279,8 +282,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/fleet_board.py</url>
-          <line>144</line>
-          <option name="timeStamp" value="21" />
+          <line>82</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fleet_board.py</url>
+          <line>117</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

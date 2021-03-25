@@ -56,8 +56,10 @@ class FleetBoard(GameBoard):
             placement_effort = 0
             row = 0
             col = 0
-            while collision and placement_effort <= 5:
-                self.print_board('Fleet Board')
+            while collision and placement_effort <= 10:
+                if placement_effort < 1:
+                    self.print_board('Fleet Board')
+                # Random generation of ship placement
                 if method_of_placement == '1' or method_of_placement == '3':
                     if placement_effort == 0:
                         print(f'Placing the {ship.ship_type}')
@@ -70,6 +72,7 @@ class FleetBoard(GameBoard):
                         direction = 'down'
                     else:
                         direction = 'across'
+                # Manual entry of ship placement
                 elif method_of_placement == '2':
                     if placement_effort == 0:
                         print(f'Please give the starting coordinates for the {ship.ship_type}')
@@ -79,6 +82,7 @@ class FleetBoard(GameBoard):
                     col = coordinates.column_entry(self.board_size)
                     row = coordinates.row_entry(self.board_size)
                     direction = coordinates.get_direction()
+
                 # Now check for collision
                 collision = self.ship_placement_check(row, col, direction, ship.size)
                 # If collision exists, optionally print error message and then cycle back for another effort
@@ -101,15 +105,16 @@ class FleetBoard(GameBoard):
             return collision
 
         # Setup temp start and end locations so the loop will also "Increment
+        # Starting point has been checked, so continue with row+1  or col+1 as counter initializer
         if direction == 'down':
             start_point = row + 1
-            end_point = col + size
+            end_point = row + size - 1
         elif direction == 'across':
-            end_point = row + size
             start_point = col + 1
+            end_point = col + size - 1
 
         # check for boundaries based upon ship size
-        if end_point > self.board_size:
+        if end_point > self.board_size - 1:
             collision = True
             return collision
 
